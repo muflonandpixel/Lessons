@@ -1,9 +1,10 @@
-﻿Console.WriteLine("Hello, World!");
-Console.WriteLine("Введите число: ");
+﻿Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 if (number > 99 && number < 1000)
 {
-    int result = number/100*10+number%10;
+    int secondDigit = number/10%10;
+    int thirdDigit = number%10;
+    int result = (int)Math.Pow(secondDigit, thirdDigit);
     Console.WriteLine(result);
 }
 else
